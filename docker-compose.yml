@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  docker-authorization-builder:
+    container_name: docker-authorization-builder
+    image: docker-authorization-builder
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 256M
